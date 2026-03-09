@@ -3,7 +3,7 @@
 At any point once the server is started, see a summary of resource allocations by
 pointing a web browser at `http://127.0.0.1:8000/`.
 
-```
+```bash
 # Set up a django env.
 python -m venv .venv
 . .venv/bin/activate
