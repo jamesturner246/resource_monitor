@@ -1,9 +1,6 @@
-import uuid
-
 from django.db import models
 
 
 class Resource(models.Model):
-    uuid = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    name = models.CharField(max_length=200)
+    name = models.CharField(primary_key=True, max_length=200)
     owner = models.CharField(max_length=200, null=True)

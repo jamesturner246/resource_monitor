@@ -1,8 +1,10 @@
 from django.urls import path
 
-from . import views
+from .views import add_resource, take_resource, release_resource, index
 
 urlpatterns = [
-    path("", views.index, name="index"),
-    path("add_resource/", views.add_resource, name="add_resource")
+    path("", index, name="index"),
+    path("add_resource/", add_resource, name="add_resource"),
+    path("take_resource/", take_resource, name="take_resource"),
+    path("release_resource/", release_resource, name="release_resource"),
 ]
