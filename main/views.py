@@ -26,6 +26,16 @@ def add_resource(request: HttpRequest) -> JsonResponse:
     })
 
 
+def query_resource(request: HttpRequest) -> JsonResponse:
+    name = request.POST.get("name")
+    resource = Resource.objects.get(name=name)
+
+    return JsonResponse({
+        "name": resource.name,
+        "owner": resource.owner,
+    })
+
+
 def take_resource(request: HttpRequest) -> JsonResponse:
     name = request.POST.get("name")
     resource = Resource.objects.get(name=name)
