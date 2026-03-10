@@ -27,6 +27,9 @@ curl -k -X POST "http://127.0.0.1:8000/take_resource/" -d "name=resource_two"
 
 # Release one.
 curl -k -X POST "http://127.0.0.1:8000/release_resource/" -d "name=resource_one"
+
+# Query ownership of the other.
+curl -k -X POST "http://127.0.0.1:8000/query_resource/" -d "name=resource_two"
 ```
 
 One can also register a user using the below command, and login by pointing a web at `http://127.0.0.1:8000/accounts/login/`, although this currently doesn't do anything.
